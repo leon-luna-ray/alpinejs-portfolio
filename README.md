@@ -1,11 +1,16 @@
-# hw02-responsive-portfolio
-* First commit of my portfolio website. Three pages: home, portfolio and contact.
-* Created semantic html elemtents
-* Used bootstrap for majority of the styling with some custom CSS styles as well.
+# coding-portfolio
+
+* My coding portfolio. Three pages: home, portfolio and contact.
+
+* Used Bootstrap for majority of the styling with some custom CSS styles as well.
+
 * Created a responsive design across the site.
+
 * Created nav bar and footer using bootstrap.
-* Used bootstrap grid for positioning. (still having trouble with the last image on the portfolio page.)
-* Created bio and added my own pictures.
+
+* Used bootstrap grid for positioning.
+
+* Created bio and and recent applications/projects.
 
 
 
