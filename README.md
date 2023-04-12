@@ -1,11 +1,6 @@
 # bootstrap-portfolio
 
-* My coding portfolio. Three pages: home, portfolio and contact.
-* Used Bootstrap for majority of the styling with some custom CSS styles as well.
-* Created a responsive design across the site.
-* Created nav bar and footer using bootstrap.
-* Used bootstrap grid for positioning.
-* Created bio and and recent applications/projects.
+This is an early developer portfolio project built with HTML and Boostrap CSS. I have refactored the orginal static site to pull content from Sanity.io CMS and render HTML dynamically with Alpline.js. This updates the content automatically and keeps it up to date.
 
 Project URL: [https://bootstrap-portfolio-rldev.netlify.app/](https://bootstrap-portfolio-rldev.netlify.app/)
 
@@ -13,8 +8,9 @@ Project URL: [https://bootstrap-portfolio-rldev.netlify.app/](https://bootstrap-
 
 - HTML5
 - CSS3
-- JavaScript
 - Bootstrap CSS
+- JavaScript
+- Alpine.js
 - Vite.js
 - Sanity.io
 - GROQ

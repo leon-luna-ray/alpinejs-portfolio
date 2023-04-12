@@ -11,6 +11,7 @@ console.log(profile)
 
 Alpine.store('profile', {
   hobbies: hobbies.hobbies || [],
+  profile: profile,
 })
 
 

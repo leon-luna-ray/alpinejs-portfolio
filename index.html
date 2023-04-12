@@ -35,7 +35,7 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./pages/portfolio.html">Portfolio</a>
+              <a class="nav-link" href="./pages/projects.html">Projects</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./pages/contact.html">Contact</a>
@@ -47,49 +47,32 @@
 
     <main>
       <div class="container container-main border border-dark">
+
         <h1 class="border-bottom">About Me</h1>
         <div class="row row-1">
           <div class="col">
-            <img
-              src="./assets/images/DSCF8890-3200.jpg"
-              alt=""
-              class="img-thumbnail"
-              id="main-image"
-            />
-            <p>
-              Hello world! I'm Ray. I'm a full-stack web developer and currently
-              a student with University of Oregon's Coding Bootcamp. The reason
-              I got into coding is because find it allows me to constantly
-              challenge myself. I love to learn and I'm always looking for
-              something new to expand my knowlegde. I have an interest in both
-              front-end and back-end development and learning new languages and
-              technologies.
-            </p>
-            <p>
-              Originally from Mexicali, Mexico and currently living in the
-              Portland, Oregon metro area. My hobbies are cooking, language,
-              travel and photography.
-            </p>
+            <p x-text="$store.profile.bio"></p>
           </div>
         </div>
+
         <div class="row">
-          <div class="col"></div>
+          <div class="col">
+            <h3>Hobbies</h3>
+            <ul x-data>
+              <template x-for="item in $store.profile.hobbies">
+                  <li x-text="item.title"></li>
+              </template>
+            </ul>
+          </div>
         </div>
-        <ul x-data="{ colors: ['Red', 'Orange', 'Yellow'] }">
-          <template x-for="item in $store.profile.hobbies">
-              <li x-text="item.title"></li>
-          </template>
-      </ul>
-      </div>
       <!---container-->
     </main>
 
     <footer
-      class="row d-flex justify-content-center navbar navbar-expand-lg navbar navbar-dark bg-dark navbarText"
+      x-data class="row d-flex justify-content-center navbar navbar-expand-lg navbar navbar-dark bg-dark navbarText"
     >
+      © Ray Luna <span x-text="new Date.getFullYear()"></span>
     </footer>
-
     <script type="module" src="./js/index.js"></script>
-    <script type="module" src="./js/script.js"></script>
   </body>
 </html>
