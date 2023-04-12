@@ -75,6 +75,11 @@
         <div class="row">
           <div class="col"></div>
         </div>
+        <ul x-data="{ colors: ['Red', 'Orange', 'Yellow'] }">
+          <template x-for="item in $store.profile.hobbies">
+              <li x-text="item.title"></li>
+          </template>
+      </ul>
       </div>
       <!---container-->
     </main>
@@ -82,8 +87,9 @@
     <footer
       class="row d-flex justify-content-center navbar navbar-expand-lg navbar navbar-dark bg-dark navbarText"
     >
-      © Ray Luna
     </footer>
+
+    <script type="module" src="./js/index.js"></script>
     <script type="module" src="./js/script.js"></script>
   </body>
 </html>

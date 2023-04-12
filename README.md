@@ -7,6 +7,8 @@
 * Used bootstrap grid for positioning.
 * Created bio and and recent applications/projects.
 
+Project URL: [https://bootstrap-portfolio-rldev.netlify.app/](https://bootstrap-portfolio-rldev.netlify.app/)
+
 ## Technologies
 
 - HTML5
