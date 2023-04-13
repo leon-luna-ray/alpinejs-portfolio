@@ -5,9 +5,8 @@ window.Alpine = Alpine;
 
 const profile = await fetchProfile();
 const hobbies = await fetchHobbies();
-const skills = await fetchSkills();
+// const skills = await fetchSkills();
 
-console.log(skills)
 
 function getThumbnailUrl (image) {
   return getImageUrl(image).size(300, 300).url();
@@ -25,7 +24,7 @@ Alpine.store('profile', {
   hobbies: hobbies.hobbies || [],
   profile: profile,
   image: profile.image ? getThumbnailUrl(profile.image) : '#',
-  skills: skills || [],
+  // skills: skills || [],
   renderListItems,
 });
 
