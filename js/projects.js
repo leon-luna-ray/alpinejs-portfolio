@@ -5,11 +5,13 @@ window.Alpine = Alpine;
 
 const projects = await fetchFeaturedProjects();
 
-console.log(projects);
+function getThumbnailUrl (image) {
+  return getImageUrl(image).size(300, 300).url();
+}
 
 Alpine.store('projects', {
   projects: projects || [],
-  getImageUrl,
+  getThumbnailUrl,
 });
 
 Alpine.start();
