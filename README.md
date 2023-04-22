@@ -6,14 +6,16 @@ Project URL: [https://bootstrap-portfolio-rldev.netlify.app/](https://bootstrap-
 
 ## Technologies
 
-- HTML5
-- Bootstrap CSS
 - JavaScript
 - Alpine.js
 - Vite.js
+- HTML5
+- Bootstrap CSS
+- Sass
+- PostCSS
 - Sanity.io
 - GROQ
 - Netlify
 
 
-![Screenshot](./assets/bootstrap-portfolio.png)
+![Screenshot](./assets/img/bootstrap-portfolio.png)
