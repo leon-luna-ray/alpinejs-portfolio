@@ -1,22 +1,17 @@
-$primary-color: #ff00a2;
-$secondary-color: #6c757d;
-$success-color: #28a745;
-$info-color: #17a2b8;
-$warning-color: #ffc107;
-$danger-color: #dc3545;
-$light-color: #f8f9fa;
-$dark-color: #343a40;
+$alpine-orange: #dbff87;
+$alpine-green: #7ee0c3;
+$alpine-blue: #acecff;
+$alpine-brown: #433A23;
+$alpine-beige: #fffdf9;
+
 
 // Override Bootstrap's default colors
 $theme-colors: (
-  "primary": $primary-color,
-  "secondary": $secondary-color,
-  "success": $success-color,
-  "info": $info-color,
-  "warning": $warning-color,
-  "danger": $danger-color,
-  "light": $light-color,
-  "dark": $dark-color,
+  "alpine-orange": $alpine-orange,
+  "alpine-green": $alpine-green,
+  "alpine-blue": $alpine-blue,
+  "alpine-brown": $alpine-brown,
+  "alpine-beige": $alpine-beige,
 );
 
 // Important: Must be at the bottom.
