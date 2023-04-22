@@ -6,14 +6,19 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:css": "sass assets/scss/style.scss assets/css/style.css --no-source-map --style compressed"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23",
     "vite": "^4.2.0"
   },
   "dependencies": {
     "@sanity/client": "^5.4.2",
     "@sanity/image-url": "^1.0.2",
-    "alpinejs": "^3.12.0"
+    "alpinejs": "^3.12.0",
+    "bootstrap": "^5.3.0-alpha3",
+    "sass": "^1.62.0"
   }
 }
