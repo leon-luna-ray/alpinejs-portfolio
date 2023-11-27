@@ -10,8 +10,9 @@
     "build:css": "sass assets/scss/style.scss assets/css/style.css --no-source-map --style compressed"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.23",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
     "vite": "^4.2.0"
   },
   "dependencies": {
