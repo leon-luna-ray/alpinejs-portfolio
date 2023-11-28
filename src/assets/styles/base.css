@@ -2,11 +2,29 @@
 
 @layer base {
   body {
-    @apply dark:bg-black dark:text-alpine-10;
+    @apply bg-alpine-10 text-alpine-50 dark:bg-black dark:text-alpine-10 font-dm;
   }
+
   a {
-    @apply dark:hover:text-alpine-20;
+    @apply hover:underline hover:text-alpine-40 dark:hover:text-alpine-20;
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .h1,
+  .h2,
+  .h3,
+  .h4 {
+    @apply font-lora font-[600];
+  }
+
+  h1,
+  .h1 {
+    @apply text-[4rem];
+  }
+
   .container {
     @apply max-w-[1440px];
   }
