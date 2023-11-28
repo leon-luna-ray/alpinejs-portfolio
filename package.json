@@ -1,5 +1,5 @@
 {
-  "name": "bootstrap-portfolio",
+  "name": "alpinejs-portfolio",
   "private": true,
   "version": "3.0.0",
   "type": "module",
@@ -17,6 +17,7 @@
     "@sanity/client": "^5.4.2",
     "@sanity/image-url": "^1.0.2",
     "alpinejs": "^3.12.0",
+    "darkmode-js": "^1.5.7",
     "tailwindcss": "^3.3.5"
   }
 }
