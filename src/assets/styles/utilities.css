@@ -13,4 +13,7 @@
   .flex-col-2 {
     @apply flex flex-col gap-y-[2rem];
   }
+  .zoom-in-out {
+    @apply hover:cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300;
+  }
 }

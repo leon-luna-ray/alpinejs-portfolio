@@ -1,10 +1,13 @@
 @tailwind base;
 
 @layer base {
-    body {
-        @apply dark:bg-black dark:text-alpine-10;
-    }
-    .container {
-        @apply max-w-[1440px];
-    }
+  body {
+    @apply dark:bg-black dark:text-alpine-10;
+  }
+  a {
+    @apply dark:hover:text-alpine-20;
+  }
+  .container {
+    @apply max-w-[1440px];
+  }
 }

@@ -29,7 +29,7 @@
           <h1>Projects</h1>
           <div x-data class="grid md:grid-cols-3 gap-[2rem]">
             <template x-for="project in $store.profile.projects">
-              <a :href="project.url" target="_blank" class="flex-col-1">
+              <a :href="project.url" target="_blank" class="zoom-in-out flex-col-1">
                 <img
                   :src="$store.profile.getThumbnailUrl(project.mainImage)"
                   :alt="project.title"
