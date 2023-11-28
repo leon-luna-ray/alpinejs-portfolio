@@ -1,91 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ray Luna | Developer Portfolio</title>
-    <link rel="stylesheet" href="/src/assets/styles/main.css" />
-    <script defer type="module" src="/src/js/script.js"></script>
-  </head>
 
-  <body>
-    <header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ray Luna | Developer Portfolio</title>
+  <link rel="stylesheet" href="/src/assets/styles/main.css" />
+  <script defer type="module" src="/src/js/script.js"></script>
+</head>
+
+<body>
+
+
+  <header>
+    <div class="container py-[2rem]">
+      <nav class="flex justify-end">
+        <button class="dark:bg-alpine-10 dark:text-alpine-50 px-2 rounded-md">L/D</button>
+      </nav>
+    </div>
+
+  </header>
+  <main id="main" class="flex-col-2">
+    <!-- <section id="about" class="flex-col-1">
       <div class="container">
-        <h1>Ray Luna</h1>
+        <h1>About Me</h1>
+        <div class="flex flex-col md:flex-row gap-x-[1rem]">
+          <img x-data :src="$store.profile.image" alt="" />
+          <p x-data x-text="$store.profile.profile.bio"></p>
+        </div>
       </div>
-    </header>
-    <main id="main" class="flex-col-2">
-      <section id="about" class="flex-col-1">
-        <div class="container">
-          <h1>About Me</h1>
-          <div class="flex flex-col md:flex-row gap-x-[1rem]">
-            <img x-data :src="$store.profile.image" alt="" />
-            <p x-data x-text="$store.profile.profile.bio"></p>
-          </div>
-        </div>
-      </section>
-      <section id="featured-projects" class="flex-col-1">
-        <div class="container">
-          <h1>Projects</h1>
-          <div x-data class="grid md:grid-cols-3 gap-[2rem]">
-            <template x-for="project in $store.profile.projects">
-              <a :href="project.url" target="_blank" class="zoom-in-out flex-col-1">
-                <img
-                  :src="$store.profile.getThumbnailUrl(project.mainImage)"
-                  :alt="project.title"
-                />
-                <div class="flex-col-03">
-                  <span x-text="project.title"></span>
-                  <span x-text="project.description[0].children[0].text"></span>
-                </div>
-              </a>
-            </template>
-          </div>
-        </div>
-      </section>
-      <section id="contact">
-        <div class="container">
-          <h2 class="border-bottom">Contact Me</h2>
-          <ul>
-            <li x-data class="contact-item">
-              E-Mail:
-              <a
-                x-text="$store.profile.profile.email"
-                :href="`mailto:${$store.profile.profile.email}`"
-              ></a>
-            </li>
-            <li x-data class="contact-item">
-              Linkedin:
-              <a
-                x-text="$store.profile.profile.linkedin_user"
-                :href="$store.profile.profile.linkedin"
-                target="_blank"
-              ></a>
-            </li>
-            <li x-data class="contact-item">
-              Github:
-              <a
-                x-text="$store.profile.profile.github_user"
-                :href="$store.profile.profile.github"
-                target="_blank"
-              ></a>
-            </li>
-            <li x-data class="contact-item">
-              Website:
-              <a
-                x-text="$store.profile.profile.website_name"
-                :href="$store.profile.profile.website"
-                target="_blank"
-              ></a>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </main>
-    <footer x-data>
+    </section> -->
+    <!-- <section id="featured-projects" class="flex-col-1">
       <div class="container">
-        © Ray Luna <span x-text="new Date().getFullYear()" class="pl-1"></span>
+        <h1>Projects</h1>
+        <div x-data class="grid md:grid-cols-3 gap-[2rem]">
+          <template x-for="project in $store.profile.projects">
+            <a :href="project.url" target="_blank" class="zoom-in-out flex-col-1">
+              <img :src="$store.profile.getThumbnailUrl(project.mainImage)" :alt="project.title" />
+              <div class="flex-col-03">
+                <span x-text="project.title"></span>
+                <span x-text="project.description[0].children[0].text"></span>
+              </div>
+            </a>
+          </template>
+        </div>
       </div>
-    </footer>
-  </body>
+    </section> -->
+    <!-- <section id="contact">
+      <div class="container">
+        <h2 class="border-bottom">Contact Me</h2>
+        <ul>
+          <li x-data class="contact-item">
+            E-Mail:
+            <a x-text="$store.profile.profile.email" :href="`mailto:${$store.profile.profile.email}`"></a>
+          </li>
+          <li x-data class="contact-item">
+            Linkedin:
+            <a x-text="$store.profile.profile.linkedin_user" :href="$store.profile.profile.linkedin"
+              target="_blank"></a>
+          </li>
+          <li x-data class="contact-item">
+            Github:
+            <a x-text="$store.profile.profile.github_user" :href="$store.profile.profile.github" target="_blank"></a>
+          </li>
+          <li x-data class="contact-item">
+            Website:
+            <a x-text="$store.profile.profile.website_name" :href="$store.profile.profile.website" target="_blank"></a>
+          </li>
+        </ul>
+      </div>
+    </section> -->
+  </main>
+  <footer x-data>
+    <div class="container md:py-[2rem] font-[100]">
+      © Ray Luna <span x-text="new Date().getFullYear()" class="pl-1"></span>
+    </div>
+  </footer>
+</body>
+
 </html>
