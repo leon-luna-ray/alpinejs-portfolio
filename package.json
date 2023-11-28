@@ -1,13 +1,12 @@
 {
   "name": "bootstrap-portfolio",
   "private": true,
-  "version": "2.0.0",
+  "version": "3.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "build:css": "sass assets/scss/style.scss assets/css/style.css --no-source-map --style compressed"
+    "preview": "vite preview"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
@@ -18,7 +17,6 @@
     "@sanity/client": "^5.4.2",
     "@sanity/image-url": "^1.0.2",
     "alpinejs": "^3.12.0",
-    "bootstrap": "^5.3.0-alpha3",
-    "sass": "^1.62.0"
+    "tailwindcss": "^3.3.5"
   }
 }
