@@ -41,13 +41,16 @@
         <div>
           <h2>About Me</h2>
         </div>
-        <div class="flex flex-wrap gap-[1rem] md:col-span-2">
-          <img x-data :src="$store.profile.image" alt="Profile picture"
-            class="rounded-lg border border-alpine-40 dark:border-white" />
-          <p x-data x-text="$store.profile.profile.bio" class="text-[1.25rem] leading-[1.85rem]"></p>
+        <div class="flex-col-2 md:col-span-2">
+          <p x-data x-text="$store.profile.profile.bio" class="flex-1 text-[1.3rem] leading-[2rem]"></p>
+          <!-- <div class="aspect-square float-left">
+            <img x-data :src="$store.profile.image" alt="Profile picture"
+              class="rounded-lg border border-alpine-40 dark:border-white" />
+          </div> -->
         </div>
       </div>
     </section>
+
     <!-- <section id="featured-projects" class="flex-col-1">
       <div class="container">
         <h1>Projects</h1>
