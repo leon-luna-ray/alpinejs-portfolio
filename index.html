@@ -18,7 +18,7 @@
       <section id="about" class="flex-col-1">
         <div class="container">
           <h1>About Me</h1>
-          <div class="flex gap-x-[1rem]">
+          <div class="flex flex-col md:flex-row gap-x-[1rem]">
             <img x-data :src="$store.profile.image" alt="" />
             <p x-data x-text="$store.profile.profile.bio"></p>
           </div>
