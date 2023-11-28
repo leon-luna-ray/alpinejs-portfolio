@@ -15,7 +15,8 @@
   <header>
     <div class="container py-[2rem]">
       <nav class="flex justify-end">
-        <button class="dark:bg-alpine-10 dark:text-alpine-50 px-2 rounded-md">L/D</button>
+        <button class="dark:bg-alpine-10 dark:text-alpine-50 px-2 rounded-md"
+          x-on:click="$store.ui.darkmode.toggle()">L/D</button>
       </nav>
     </div>
 
@@ -24,10 +25,11 @@
     <section id="hero" class="grid grid-cols-2 md:min-h-[800px]">
       <div class="flex flex-col justify-center items-center leading-[6.5rem]">
         <h1 class="font-orbitron font-[100] text-[5.5rem] dark:opacity-[80%] tracking-[-0.1rem]">Ray Luna</h1>
-        <h2 class="dark:text-white font-dm text-[6.1rem] font-[400] tracking-[0.5rem]">WebDev</h2>
+        <h2 class="text-alpine-30 dark:text-white font-dm text-[6.1rem] font-[400] tracking-[0.5rem]">WebDev</h2>
       </div>
       <div class="flex flex-col justify-center items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="300" height="300" class="animate-spin-slow">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="300" height="300"
+          class="animate-spin-slow">
           <line x1="20" y1="180" x2="180" y2="20" stroke="currentColor" stroke-width="30" stroke-linecap="round" />
           <line x1="20" y1="180" x2="50" y2="150" stroke="currentColor" stroke-width="5" stroke-linecap="round" />
           <line x1="180" y1="20" x2="150" y2="50" stroke="currentColor" stroke-width="5" stroke-linecap="round" />
