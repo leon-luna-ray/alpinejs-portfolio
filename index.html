@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" x-data :class="{ 'dark': $store.darkMode.on }">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ray Luna | Developer Portfolio</title>
   <link rel="stylesheet" href="/src/assets/styles/main.css" />
-  <script defer type="module" src="/src/js/script.js"></script>
+  <script defer type="module" src="/src/js/main.js"></script>
 </head>
 
 <body>
   <header>
     <div class="container py-[2rem]">
       <nav class="flex justify-end">
-        <button class="dark:bg-alpine-10 dark:text-alpine-50 px-2 rounded-md"
-          x-on:click="$store.ui.darkmode.toggle()">L/D</button>
+        <button class="dark:bg-alpine-10 dark:text-alpine-50 px-2 rounded-md" x-data @click="$store.darkMode.toggle()">I/O</button>
       </nav>
     </div>
   </header>
@@ -35,6 +34,7 @@
         </svg>
       </div>
     </section>
+    
     <!-- About -->
     <section id="about">
       <div class="container grid md:grid-cols-3">
