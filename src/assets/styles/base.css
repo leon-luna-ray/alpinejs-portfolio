@@ -2,7 +2,7 @@
 
 @layer base {
   body {
-    @apply bg-alpine-10 text-alpine-50 dark:bg-black dark:text-alpine-10 font-dm;
+    @apply font-[300] bg-alpine-10 text-alpine-50/80 dark:bg-black dark:text-alpine-10 font-dm;
   }
 
   a {
@@ -22,6 +22,18 @@
 
   h1,
   .h1 {
+    @apply text-[4rem];
+  }
+  h2,
+  .h2 {
+    @apply text-[3rem];
+  }
+  h3,
+  .h3 {
+    @apply text-[2rem];
+  }
+  h4,
+  .h5 {
     @apply text-[4rem];
   }
 
