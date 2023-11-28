@@ -10,8 +10,6 @@
 </head>
 
 <body>
-
-
   <header>
     <div class="container py-[2rem]">
       <nav class="flex justify-end">
@@ -19,9 +17,10 @@
           x-on:click="$store.ui.darkmode.toggle()">L/D</button>
       </nav>
     </div>
-
   </header>
+
   <main id="main" class="flex-col-2">
+    <!-- Hero -->
     <section id="hero" class="grid grid-cols-2 md:min-h-[800px]">
       <div class="flex flex-col justify-center items-center leading-[6.5rem]">
         <h1 class="font-orbitron font-[100] text-[5.5rem] dark:opacity-[80%] tracking-[-0.1rem]">Ray Luna</h1>
@@ -86,6 +85,7 @@
       </div>
     </section> -->
   </main>
+
   <footer x-data>
     <div class="container md:py-[2rem] font-[100] flex justify-center items-center">
       © Ray Luna <span class="pl-[0.2rem]" x-text="new Date().getFullYear()"></span>
