@@ -1,6 +1,7 @@
 import { createClient } from '@sanity/client';
 import imageUrlBuilder from '@sanity/image-url';
 
+
 export const client = createClient({
   projectId: import.meta.env.VITE_SANITY_PROJECT_ID,
   dataset: import.meta.env.VITE_SANITY_DATASET,
@@ -29,16 +30,16 @@ export async function fetchProfile() {
 //   return hobbies;
 // }
 
-export async function fetchFeaturedProjects() {
-  const query = `*[_type == "project" && featured] | order(_updatedAt desc)`;
-  const projects = await client.fetch(query);
-
-  return projects;
-}
-
 export async function fetchSkills() {
   const query = `*[_type == "skillsList"] | order(title) {title, "skills" : skills[] -> {title, website}}`;
   const skills = await client.fetch(query);
 
   return skills;
+}
+
+export async function fetchFeaturedProjects() {
+  const query = `*[_type == "project" && featured] | order(_updatedAt desc)`;
+  const projects = await client.fetch(query);
+
+  return projects;
 }
