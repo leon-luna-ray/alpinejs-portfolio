@@ -15,7 +15,7 @@ const projects = await fetchFeaturedProjects();
 // const darkmode = new Darkmode();
 
 function getThumbnailUrl(image) {
-  return getImageUrl(image).size(300, 300).url();
+  return getImageUrl(image).width(600).url();
 }
 
 Alpine.store("darkMode", {

@@ -20,12 +20,12 @@
 
   <main id="main" class="flex-col-2">
     <!-- Hero -->
-    <section id="hero" class="grid grid-cols-2 md:min-h-[800px]">
+    <section id="hero" class="grid md:grid-cols-2 md:min-h-[800px] gap-[4rem] pb-[4rem]">
       <div class="flex flex-col justify-center items-center leading-[6.5rem]">
         <h1 class="font-orbitron font-[100] text-[5.5rem] dark:opacity-[80%] tracking-[-0.1rem]">Ray Luna</h1>
         <h2 class="text-alpine-30 dark:text-white font-dm text-[6.1rem] font-[400] tracking-[0.5rem]">WebDev</h2>
       </div>
-      <div class="flex flex-col justify-center items-center">
+      <div class="flex justify-center items-center">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="300" height="300"
           class="animate-spin-slow">
           <line x1="20" y1="180" x2="180" y2="20" stroke="currentColor" stroke-width="30" stroke-linecap="round" />
@@ -37,16 +37,17 @@
     
     <!-- About -->
     <section x-show="$store.data.profile.bio" id="about">
-      <div class="container grid md:grid-cols-3">
+      <div class="container grid md:grid-cols-3 gap-[1rem]">
         <div>
           <h2>About Me</h2>
         </div>
         <div class="flex-col-2 md:col-span-2">
-          <p x-text="$store.data.profile.bio" class="flex-1 text-[1.3rem] leading-[2rem]"></p>
-          <div class="aspect-square float-left">
+          <!-- <div class="flex"> -->
             <img :src="$store.data.image" alt="Profile picture"
-              class="rounded-lg border border-alpine-40 dark:border-white" />
-          </div>
+            class="object-cover aspect-video rounded-lg border-alpine-40 dark:border-white xl:w-max" />
+            <p x-text="$store.data.profile.bio" class="flex-1 text-[1.3rem] leading-[2rem]"></p>
+          <!-- </div> -->
+
         </div>
       </div>
     </section>
@@ -95,7 +96,7 @@
   </main>
 
   <footer x-data>
-    <div class="container md:py-[2rem] font-[100] flex justify-center items-center gap-x-[0.2rem]">
+    <div class="container py-[2rem] font-[100] flex justify-center items-center gap-x-[0.2rem]">
       © <a href="https://www.rayluna.dev/" target="_blank">Ray Luna</a> <span x-text="new Date().getFullYear()"></span>
     </div>
   </footer>
