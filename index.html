@@ -9,11 +9,11 @@
   <script defer type="module" src="/src/js/main.js"></script>
 </head>
 
-<body>
+<body x-cloak>
   <header>
     <div class="container py-[2rem]">
       <nav class="flex justify-end">
-        <button class="bg-alpine-50 text-alpine-10 dark:bg-alpine-10 dark:text-alpine-50 px-2 rounded-md" x-data @click="$store.darkMode.toggle()">I/O</button>
+        <button @click="$store.darkMode.toggle()" class="bg-alpine-50 text-alpine-10 dark:bg-alpine-10 dark:text-alpine-50 px-2 rounded-md">I/O</button>
       </nav>
     </div>
   </header>
@@ -36,17 +36,17 @@
     </section>
     
     <!-- About -->
-    <section id="about">
+    <section x-show="$store.data.profile.bio" id="about">
       <div class="container grid md:grid-cols-3">
         <div>
           <h2>About Me</h2>
         </div>
         <div class="flex-col-2 md:col-span-2">
-          <p x-data x-text="$store.profile.profile.bio" class="flex-1 text-[1.3rem] leading-[2rem]"></p>
-          <!-- <div class="aspect-square float-left">
-            <img x-data :src="$store.profile.image" alt="Profile picture"
+          <p x-text="$store.data.profile.bio" class="flex-1 text-[1.3rem] leading-[2rem]"></p>
+          <div class="aspect-square float-left">
+            <img :src="$store.data.image" alt="Profile picture"
               class="rounded-lg border border-alpine-40 dark:border-white" />
-          </div> -->
+          </div>
         </div>
       </div>
     </section>
@@ -67,6 +67,7 @@
         </div>
       </div>
     </section> -->
+
     <!-- <section id="contact">
       <div class="container">
         <h2 class="border-bottom">Contact Me</h2>

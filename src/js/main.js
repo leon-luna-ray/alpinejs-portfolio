@@ -30,7 +30,7 @@ Alpine.store("darkMode", {
   },
 });
 
-Alpine.store("profile", {
+Alpine.store("data", {
   hobbies: hobbies.hobbies || [],
   profile: profile,
   image: profile.image ? getThumbnailUrl(profile.image) : "#",

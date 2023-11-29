@@ -21,3 +21,5 @@
     @apply hover:cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300;
   }
 }
+
+[x-cloak] { display: none !important; }
