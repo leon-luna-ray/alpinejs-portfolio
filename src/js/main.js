@@ -39,3 +39,5 @@ Alpine.store("data", {
 });
 
 Alpine.start();
+
+console.log(profile)
