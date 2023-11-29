@@ -2,7 +2,7 @@
 
 @layer base {
   body {
-    @apply font-[200] bg-alpine-10 text-alpine-50 dark:bg-alpine-50 dark:text-white font-dm;
+    @apply text-[1.25rem] font-[200] bg-alpine-10 text-alpine-50 dark:bg-alpine-50 dark:text-white font-dm;
   }
 
   a {
@@ -22,7 +22,7 @@
 
   h1,
   .h1 {
-    @apply text-[4rem];
+    @apply text-[3.5rem];
   }
   h2,
   .h2 {
@@ -30,14 +30,18 @@
   }
   h3,
   .h3 {
-    @apply text-[2rem];
+    @apply text-[2.5rem];
   }
   h4,
+  .h4 {
+    @apply text-[1.5rem];
+  }
+  h5,
   .h5 {
-    @apply text-[4rem];
+    @apply text-[1rem];
   }
 
   .container {
-    @apply max-w-[1200px];
+    /* @apply max-w-[1200px] border-red; */
   }
 }

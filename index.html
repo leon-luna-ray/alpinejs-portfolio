@@ -13,17 +13,17 @@
   <header>
     <div class="container py-[2rem]">
       <nav class="flex justify-end">
-        <button @click="$store.darkMode.toggle()" class="bg-alpine-50 text-alpine-10 dark:bg-alpine-10 dark:text-alpine-50 px-2 rounded-md">I/O</button>
+        <button @click="$store.darkMode.toggle()"
+          class="bg-alpine-50 text-alpine-10 dark:bg-alpine-10 dark:text-alpine-50 px-2 rounded-md">I/O</button>
       </nav>
     </div>
   </header>
-
-  <main id="main" class="flex-col-2">
+  <main id="main" class="flex-col-4 md:flex-col-8">
     <!-- Hero -->
-    <section id="hero" class="grid md:grid-cols-2 md:min-h-[800px] gap-[4rem] pb-[4rem]">
-      <div class="flex flex-col justify-center items-center leading-[6.5rem]">
-        <h1 class="font-orbitron font-[100] text-[5.5rem] dark:opacity-[80%] tracking-[-0.1rem]">Ray Luna</h1>
-        <h2 class="text-alpine-30 dark:text-white font-dm text-[6.1rem] font-[400] tracking-[0.5rem]">WebDev</h2>
+    <section id="hero" class="container grid md:grid-cols-2 md:min-h-[800px] gap-[4rem] pb-[4rem]">
+      <div class="flex flex-col justify-center items-center md:leading-[6.5rem] text-center">
+        <h1 class="font-orbitron font-[100] text-[4rem] lg:text-[5.5rem] dark:opacity-[80%] tracking-[-0.1rem]">Ray Luna</h1>
+        <h2 class="text-alpine-30 dark:text-white font-dm text-[3rem] lg:text-[6.1rem] font-[400] tracking-[0.5rem]">WebDev</h2>
       </div>
       <div class="flex justify-center items-center">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="300" height="300"
@@ -34,40 +34,39 @@
         </svg>
       </div>
     </section>
-    
     <!-- About -->
     <section x-show="$store.data.profile.bio" id="about">
-      <div class="container grid md:grid-cols-3 gap-[1rem]">
-        <div>
+      <div class="container thirds-grid">
+        <div class="flex-col-2">
           <h2>About Me</h2>
+          <h3 x-text="$store.data.profile.greeting" class="font-orbitron h4 dark:!text-alpine-20 font-[100]"></h3>
         </div>
         <div class="flex-col-2 md:col-span-2">
-          <!-- <div class="flex"> -->
-            <img :src="$store.data.image" alt="Profile picture"
-            class="object-cover aspect-video rounded-lg border-alpine-40 dark:border-white xl:w-max" />
-            <p x-text="$store.data.profile.bio" class="flex-1 text-[1.3rem] leading-[2rem]"></p>
-          <!-- </div> -->
-
+          <img :src="$store.data.image" alt="Profile picture"
+            class="object-cover aspect-square md:aspect-video xl:aspect-[21/9] rounded-border" />
+          <p x-text="$store.data.profile.bio" class="flex-1 text-[1.25rem] leading-[2.2rem]"></p>
         </div>
       </div>
     </section>
-
-    <!-- <section id="featured-projects" class="flex-col-1">
+    <!-- Featured Projects -->
+    <section x-show="$store.data.projects?.length" id="featured-projects" class="flex-col-1">
       <div class="container">
-        <h1>Projects</h1>
-        <div x-data class="grid md:grid-cols-3 gap-[2rem]">
-          <template x-for="project in $store.profile.projects">
-            <a :href="project.url" target="_blank" class="zoom-in-out flex-col-1">
-              <img :src="$store.profile.getThumbnailUrl(project.mainImage)" :alt="project.title" />
-              <div class="flex-col-03">
-                <span x-text="project.title"></span>
-                <span x-text="project.description[0].children[0].text"></span>
+        <div class="flex justify-start py-[2rem] md:py-[4rem]">
+          <h2 class="">Featured Projects</h2>
+        </div>
+        <div class="grid md:grid-cols-2 gap-y-[2rem] gap-x-[4rem]">
+          <template x-for="project in $store.data.projects">
+            <a :href="project.url" target="_blank" class="flex-col-1 hover:no-underline hover:!text-inherit zoom-in-out">
+              <img :src="$store.data.getThumbnailUrl(project.mainImage)" :alt="project.title" class="aspect-[16/9] object-cover rounded-border"/>
+              <div class="flex-col-05">
+                <h3 x-text="project.title" class="font-dm font-bold h4 dark:!text-alpine-20 opacity-90"></h3>
+                <p x-text="project.description[0].children[0].text" class="opacity-80 text-[1.125rem] leading-[1.5rem]"></p>
               </div>
             </a>
           </template>
         </div>
       </div>
-    </section> -->
+    </section>
 
     <!-- <section id="contact">
       <div class="container">
