@@ -3,14 +3,14 @@ import Alpine from "alpinejs";
 import {
   getImageUrl,
   fetchProfile,
-  fetchHobbies,
+  fetchSkills,
   fetchFeaturedProjects,
 } from "./sanity";
 
 window.Alpine = Alpine;
 
 const profile = await fetchProfile();
-const hobbies = await fetchHobbies();
+const skills = await fetchSkills();
 const projects = await fetchFeaturedProjects();
 // const darkmode = new Darkmode();
 
@@ -31,7 +31,7 @@ Alpine.store("darkMode", {
 });
 
 Alpine.store("data", {
-  hobbies: hobbies.hobbies || [],
+  // hobbies: hobbies.hobbies || [],
   profile: profile,
   image: profile.image ? getThumbnailUrl(profile.image) : "#",
   projects: projects || [],
@@ -40,4 +40,4 @@ Alpine.store("data", {
 
 Alpine.start();
 
-console.log(projects)
+console.log(skills)

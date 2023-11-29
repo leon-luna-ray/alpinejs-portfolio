@@ -22,12 +22,12 @@ export async function fetchProfile() {
   return profile;
 }
 
-export async function fetchHobbies() {
-  const query = `*[_type == "profileDetails"][0] { "hobbies" : hobbies[] -> {title} }`;
-  const hobbies = await client.fetch(query);
+// export async function fetchHobbies() {
+//   const query = `*[_type == "profileDetails"][0] { "hobbies" : hobbies[] -> {title} }`;
+//   const hobbies = await client.fetch(query);
 
-  return hobbies;
-}
+//   return hobbies;
+// }
 
 export async function fetchFeaturedProjects() {
   const query = `*[_type == "project" && featured] | order(_updatedAt desc)`;
