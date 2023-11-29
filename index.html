@@ -23,11 +23,11 @@
     <section id="hero" class="container grid md:grid-cols-2 md:min-h-[800px] gap-[4rem] pb-[4rem]">
       <div class="flex flex-col justify-center items-center md:leading-[6.5rem] text-center">
         <h1 class="font-orbitron font-[100] text-[4rem] lg:text-[5.5rem] dark:opacity-[80%] tracking-[-0.1rem]">Ray Luna</h1>
-        <h2 class="text-alpine-30 dark:text-white font-dm text-[3rem] lg:text-[6.1rem] font-[400] tracking-[0.5rem]">WebDev</h2>
+        <h2 class="text-alpine-30 dark:text-white font-dm text-[3rem] lg:text-[6.1rem] font-[400] tracking-[0.5rem]">WebDev
+        </h2>
       </div>
       <div class="flex justify-center items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="300" height="300"
-          class="animate-spin-slow">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="300" height="300" class="animate-spin-slow">
           <line x1="20" y1="180" x2="180" y2="20" stroke="currentColor" stroke-width="30" stroke-linecap="round" />
           <line x1="20" y1="180" x2="50" y2="150" stroke="currentColor" stroke-width="5" stroke-linecap="round" />
           <line x1="180" y1="20" x2="150" y2="50" stroke="currentColor" stroke-width="5" stroke-linecap="round" />
@@ -68,26 +68,29 @@
       </div>
     </section>
 
+    <!-- TODO add skills section -->
+
+    <!-- TODO style contanct section -->
+
     <!-- <section id="contact">
       <div class="container">
         <h2 class="border-bottom">Contact Me</h2>
         <ul>
-          <li x-data class="contact-item">
+          <li>
             E-Mail:
-            <a x-text="$store.profile.profile.email" :href="`mailto:${$store.profile.profile.email}`"></a>
+            <a x-text="$store.data.profile.email" :href="`mailto:${$store.data.profile.email}`"></a>
           </li>
-          <li x-data class="contact-item">
+          <li>
             Linkedin:
-            <a x-text="$store.profile.profile.linkedin_user" :href="$store.profile.profile.linkedin"
-              target="_blank"></a>
+            <a x-text="$store.data.profile.linkedin_user" :href="$store.data.profile.linkedin" target="_blank"></a>
           </li>
-          <li x-data class="contact-item">
+          <li>
             Github:
-            <a x-text="$store.profile.profile.github_user" :href="$store.profile.profile.github" target="_blank"></a>
+            <a x-text="$store.data.profile.github_user" :href="$store.data.profile.github" target="_blank"></a>
           </li>
-          <li x-data class="contact-item">
+          <li>
             Website:
-            <a x-text="$store.profile.profile.website_name" :href="$store.profile.profile.website" target="_blank"></a>
+            <a x-text="$store.data.profile.website_name" :href="$store.data.profile.website" target="_blank"></a>
           </li>
         </ul>
       </div>
