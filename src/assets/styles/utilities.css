@@ -40,6 +40,19 @@
   .zoom-in-out {
     @apply hover:cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-105 duration-300;
   }
+
+  .neon-text {
+    color: white;
+    text-shadow:
+      0 0 7px #6FFFE9,
+      0 0 10px #6FFFE9,
+      0 0 21px #6FFFE9,
+      0 0 42px #6FFFE9,
+      0 0 82px #6FFFE9,
+      0 0 92px #6FFFE9,
+      0 0 102px #6FFFE9,
+      0 0 151px #6FFFE9;
+  }
 }
 
 [x-cloak] {
