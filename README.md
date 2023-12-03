@@ -6,6 +6,8 @@ This project was originally built with static HTML and Bootstrap. The original s
 
 Project URL: [https://alpinejs-portfolio-rldev.netlify.app/](https://alpinejs-portfolio-rldev.netlify.app/)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d02ecfca-0ea2-45b2-9093-6d33f39034f6/deploy-status)](https://app.netlify.com/sites/alpinejs-portfolio-rldev/deploys)
+
 ## Technologies
 
 - Alpine.js
