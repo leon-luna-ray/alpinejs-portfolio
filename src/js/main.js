@@ -12,7 +12,6 @@ window.Alpine = Alpine;
 const profile = await fetchProfile();
 const skills = await fetchSkills();
 const projects = await fetchFeaturedProjects();
-// const darkmode = new Darkmode();
 
 function getThumbnailUrl(image) {
   return getImageUrl(image).width(600).url();
@@ -31,7 +30,7 @@ Alpine.store("darkMode", {
 });
 
 Alpine.store("data", {
-  // hobbies: hobbies.hobbies || [],
+  skills: skills || [],
   profile: profile,
   image: profile.image ? getThumbnailUrl(profile.image) : "#",
   projects: projects || [],
