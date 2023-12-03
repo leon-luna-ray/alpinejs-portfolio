@@ -1,4 +1,6 @@
 import Alpine from "alpinejs";
+import PineconeRouter from 'pinecone-router';
+import { router } from '@/js/router';
 
 import {
   getImageUrl,
@@ -16,7 +18,11 @@ const projects = await fetchFeaturedProjects();
 function getThumbnailUrl(image) {
   return getImageUrl(image).width(600).url();
 }
-
+Alpine.store("router", {
+  router() {
+    return router();
+  }
+})
 Alpine.store("darkMode", {
   init() {
     this.on = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -37,4 +43,5 @@ Alpine.store("data", {
   getThumbnailUrl,
 });
 
+Alpine.plugin(PineconeRouter)
 Alpine.start();

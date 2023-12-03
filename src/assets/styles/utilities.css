@@ -55,7 +55,7 @@
   }
 
   .neon-icon {
-    filter: drop-shadow(0 0 5px #6FFFE9) drop-shadow(0 0 10px #6FFFE9) drop-shadow(0 0 20px #6FFFE9) drop-shadow(0 0 80px #fff);
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #6FFFE9) drop-shadow(0 0 20px #6FFFE9) drop-shadow(0 0 80px #6FFFE9);
   }
 
 }
