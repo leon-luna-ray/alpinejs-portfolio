@@ -28,4 +28,20 @@
     #contct .contact-list li a {
         @apply underline hover:text-alpine-20;
     }
+
+    #contact .contact-list li svg {
+        @apply dark:stroke-alpine-10 dark:fill-alpine-10;
+    }
+
+    #contact .contact-list li svg path {
+        @apply dark:stroke-alpine-10 dark:fill-alpine-10;
+    }
+
+    #hero-icon svg {
+        @apply w-[60%] h-auto dark:neon-icon;
+    }
+
+    #hero-icon svg path {
+        @apply dark:fill-alpine-10;
+    }
 }

@@ -1,6 +1,8 @@
 # Alpine.js Developer Portfolio
 
-This is an early developer portfolio project built with HTML5, Alpline.js and Tailwind CSS. The original static site was refactored to pull content from Sanity.io via API and render the HTML dynamically with Alpline.js. This updates the content automatically and keeps it up to date.
+Web developer portfolio project built with HTML5, Alpline.js and Tailwind CSS. 
+
+This project was originally built with static HTML and Bootstrap. The original static site was refactored to pull content from Sanity.io via API and render the HTML dynamically with Alpline.js. This updates the content automatically and keeps it up to date.
 
 Project URL: [https://alpinejs-portfolio-rldev.netlify.app/](https://alpinejs-portfolio-rldev.netlify.app/)
 
@@ -14,3 +16,7 @@ Project URL: [https://alpinejs-portfolio-rldev.netlify.app/](https://alpinejs-po
 - Sanity.io
 - TailwindCSS
 - Vite.js
+
+## Images
+
+![Screenshot Dark Mode](./src/assets/img/alpinejs-dark.png)

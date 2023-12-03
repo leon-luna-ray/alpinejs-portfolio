@@ -24,27 +24,24 @@
   .h1 {
     @apply text-[3.5rem];
   }
+
   h2,
   .h2 {
     @apply text-[3rem];
   }
+
   h3,
   .h3 {
     @apply text-[2.5rem];
   }
+
   h4,
   .h4 {
     @apply text-[1.5rem];
   }
+
   h5,
   .h5 {
     @apply text-[1rem];
-  }
-  /* main {
-    @apply py-[2rem] md:py-[rem];
-  } */
-
-  .container {
-    /* @apply max-w-[1200px] border-red; */
   }
 }

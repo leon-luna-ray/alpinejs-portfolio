@@ -53,6 +53,11 @@
       0 0 102px #6FFFE9,
       0 0 151px #6FFFE9;
   }
+
+  .neon-icon {
+    filter: drop-shadow(0 0 5px #6FFFE9) drop-shadow(0 0 10px #6FFFE9) drop-shadow(0 0 20px #6FFFE9) drop-shadow(0 0 80px #fff);
+  }
+
 }
 
 [x-cloak] {
