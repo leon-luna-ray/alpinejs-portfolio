@@ -16,4 +16,16 @@
     .list-icon .inner svg path {
         @apply stroke-alpine-10 dark:stroke-alpine-50 fill-alpine-10 dark:fill-alpine-50;
     }
+
+    .contact-list {
+        @apply grid md:grid-cols-2 gap-[2rem];
+    }
+
+    #contact .contact-list li {
+        @apply flex gap-x-[1rem] items-center;
+    }
+
+    #contct .contact-list li a {
+        @apply underline hover:text-alpine-20;
+    }
 }

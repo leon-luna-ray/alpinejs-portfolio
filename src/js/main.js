@@ -38,5 +38,3 @@ Alpine.store("data", {
 });
 
 Alpine.start();
-
-console.log(skills)

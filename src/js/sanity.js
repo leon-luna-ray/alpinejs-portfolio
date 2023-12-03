@@ -16,19 +16,11 @@ export function getImageUrl(source) {
 }
 
 export async function fetchProfile() {
-  // Sanity queires are in the GROQ query language
   const query = `*[_type == "profileDetails"][0]`;
   const profile = await client.fetch(query);
 
   return profile;
 }
-
-// export async function fetchHobbies() {
-//   const query = `*[_type == "profileDetails"][0] { "hobbies" : hobbies[] -> {title} }`;
-//   const hobbies = await client.fetch(query);
-
-//   return hobbies;
-// }
 
 export async function fetchSkills() {
   const query = `*[_type == "skillsList"] | order(title) {title, "skills" : skills[] -> {title, website}}`;
