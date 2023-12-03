@@ -13,13 +13,13 @@
   <header>
     <div class="container py-[2rem]">
       <nav class="flex justify-end">
-        <button @click="$store.darkMode.toggle()"
-          class="bg-alpine-50 text-alpine-10 dark:bg-alpine-10 dark:text-alpine-50 px-2 rounded-md">I/O</button>
+        <button @click="$store.darkMode.toggle()">I/O</button>
       </nav>
     </div>
   </header>
-  <main id="main">
-    <template x-route="/" x-template="/src/pages/home.html"></template>
+  <main x-data="$store.router.router()" id="main">
+    <template x-route="/" x-handler="home"></template>
+    <template x-route="notfound" x-handler="notfound"></template>
   </main>
   <footer x-data>
     <div class="container py-[2rem] font-[100] flex justify-center items-center gap-x-[0.2rem]">

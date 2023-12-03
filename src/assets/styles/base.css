@@ -9,6 +9,15 @@
     @apply hover:underline hover:text-alpine-40 dark:hover:text-alpine-20;
   }
 
+  button,
+  .btn {
+    @apply bg-alpine-50 text-alpine-10 dark:bg-alpine-10 dark:text-alpine-50 py-2 px-4 rounded-md;
+  }
+
+  a.btn {
+    @apply hover:text-alpine-10 hover:dark:text-alpine-50 hover:!no-underline;
+  }
+
   h1,
   h2,
   h3,
