@@ -49,7 +49,7 @@
             </div>
             <div class="grid md:grid-cols-2 gap-y-[2rem] gap-x-[4rem]">
                 <template x-for="project in $store.data.projects">
-                    <a :href="project.url" target="_blank"
+                    <a native :href="project.url" target="_blank"
                         class="flex-col-1 hover:no-underline hover:!text-inherit zoom-in-out">
                         <img :src="$store.data.getThumbnailUrl(project.mainImage)" :alt="project.title"
                             class="aspect-[16/9] object-cover rounded-border" />
@@ -130,7 +130,7 @@
                             <template x-for="item in list.skills">
                                 <li>
                                     <template x-if="item.website">
-                                        <a x-text="item.title" href="item.website" target="_blank"></a>
+                                        <a x-text="item.title" href="item.website" target="_blank" native></a>
                                     </template>
                                     <template x-if="!item.website">
                                         <span x-text="item.title"></span>
@@ -164,7 +164,7 @@
                         </g>
                     </svg>
                     <div class="text">
-                        E-Mail: <a x-text="$store.data.profile.email" :href="`mailto:${$store.data.profile.email}`"></a>
+                        E-Mail: <a native x-text="$store.data.profile.email" :href="`mailto:${$store.data.profile.email}`"></a>
                     </div>
                 </li>
                 <li>
@@ -175,7 +175,7 @@
                     </svg>
                     <div class="text">
                         Linkedin:
-                        <a x-text="$store.data.profile.linkedin_user" :href="$store.data.profile.linkedin"
+                        <a native x-text="$store.data.profile.linkedin_user" :href="$store.data.profile.linkedin"
                             target="_blank"></a>
                     </div>
                 </li>
@@ -187,7 +187,7 @@
                     </svg>
                     <div class="text">
                         Github:
-                        <a x-text="$store.data.profile.github_user" :href="$store.data.profile.github"
+                        <a native x-text="$store.data.profile.github_user" :href="$store.data.profile.github"
                             target="_blank"></a>
                     </div>
                 </li>
@@ -199,7 +199,7 @@
                     </svg>
                     <div class="text">
                         Website:
-                        <a x-text="$store.data.profile.website_name" :href="$store.data.profile.website"
+                        <a native x-text="$store.data.profile.website_name" :href="$store.data.profile.website"
                             target="_blank"></a>
                     </div>
                 </li>
