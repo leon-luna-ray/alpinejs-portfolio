@@ -130,7 +130,7 @@
                             <template x-for="item in list.skills">
                                 <li>
                                     <template x-if="item.website">
-                                        <a x-text="item.title" href="item.website" target="_blank" native></a>
+                                        <a x-text="item.title" :href="item.website" target="_blank" native></a>
                                     </template>
                                     <template x-if="!item.website">
                                         <span x-text="item.title"></span>
