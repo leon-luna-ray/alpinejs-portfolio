@@ -1,6 +1,7 @@
 import { createClient } from '@sanity/client';
 import imageUrlBuilder from '@sanity/image-url';
 
+
 export const client = createClient({
   projectId: import.meta.env.VITE_SANITY_PROJECT_ID,
   dataset: import.meta.env.VITE_SANITY_DATASET,
@@ -15,25 +16,10 @@ export function getImageUrl(source) {
 }
 
 export async function fetchProfile() {
-  // Sanity queires are in the GROQ query language
   const query = `*[_type == "profileDetails"][0]`;
   const profile = await client.fetch(query);
 
   return profile;
-}
-
-export async function fetchHobbies() {
-  const query = `*[_type == "profileDetails"][0] { "hobbies" : hobbies[] -> {title} }`;
-  const hobbies = await client.fetch(query);
-
-  return hobbies;
-}
-
-export async function fetchFeaturedProjects() {
-  const query = `*[_type == "project" && featured] | order(_updatedAt desc)`;
-  const projects = await client.fetch(query);
-
-  return projects;
 }
 
 export async function fetchSkills() {
@@ -41,4 +27,11 @@ export async function fetchSkills() {
   const skills = await client.fetch(query);
 
   return skills;
+}
+
+export async function fetchFeaturedProjects() {
+  const query = `*[_type == "project" && featured] | order(_updatedAt desc)`;
+  const projects = await client.fetch(query);
+
+  return projects;
 }

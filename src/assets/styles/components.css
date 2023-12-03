@@ -1,1 +1,47 @@
 @tailwind components;
+
+@layer components {
+    .list-icon {
+        @apply flex justify-center items-center pb-[1rem];
+    }
+
+    .list-icon .inner {
+        @apply bg-alpine-50 dark:bg-alpine-10 rounded-full p-[1rem] w-[3rem] h-[3rem];
+    }
+
+    .list-icon .inner svg {
+        @apply stroke-alpine-10 dark:stroke-alpine-50 fill-alpine-10 dark:fill-alpine-50;
+    }
+
+    .list-icon .inner svg path {
+        @apply stroke-alpine-10 dark:stroke-alpine-50 fill-alpine-10 dark:fill-alpine-50;
+    }
+
+    .contact-list {
+        @apply grid md:grid-cols-2 gap-[2rem];
+    }
+
+    #contact .contact-list li {
+        @apply flex gap-x-[1rem] items-center;
+    }
+
+    #contct .contact-list li a {
+        @apply underline hover:text-alpine-20;
+    }
+
+    #contact .contact-list li svg {
+        @apply dark:stroke-alpine-10 dark:fill-alpine-10;
+    }
+
+    #contact .contact-list li svg path {
+        @apply dark:stroke-alpine-10 dark:fill-alpine-10;
+    }
+
+    #hero-icon svg {
+        @apply w-[60%] h-auto dark:neon-icon;
+    }
+
+    #hero-icon svg path {
+        @apply dark:fill-alpine-10;
+    }
+}

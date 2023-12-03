@@ -2,7 +2,7 @@
 
 @layer base {
   body {
-    @apply bg-alpine-10 text-alpine-50 dark:bg-black dark:text-alpine-10 font-dm;
+    @apply text-[1.25rem] font-[200] bg-alpine-10 text-alpine-50 dark:bg-alpine-50 dark:text-white font-dm;
   }
 
   a {
@@ -17,15 +17,31 @@
   .h2,
   .h3,
   .h4 {
-    @apply font-lora font-[600];
+    @apply font-lora font-[500] dark:text-alpine-10;
   }
 
   h1,
   .h1 {
-    @apply text-[4rem];
+    @apply text-[3.5rem];
   }
 
-  .container {
-    @apply max-w-[1440px];
+  h2,
+  .h2 {
+    @apply text-[3rem];
+  }
+
+  h3,
+  .h3 {
+    @apply text-[2.5rem];
+  }
+
+  h4,
+  .h4 {
+    @apply text-[1.5rem];
+  }
+
+  h5,
+  .h5 {
+    @apply text-[1rem];
   }
 }

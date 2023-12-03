@@ -1,11 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,html}'],
+  darkMode: 'class',
   theme: {
     container: {
       padding: {
-        DEFAULT: '1rem',
-        lg: '2rem',
+        DEFAULT: '1.5rem',
+        md: '2rem',
+        lg: '4rem',
       },
       center: true,
     },
@@ -28,10 +30,9 @@ export default {
         none: 'none',
         bounce: 'bounce 1s infinite',
         ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
-        pulse: 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        pulse: 'pulse 10s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         slide: 'slide 1s ease-in-out infinite alternate, slide-out 1s ease-in-out 1s infinite alternate',
-        spin: 'spin 2s linear infinite',
-        'spin-slow': 'spin 5s linear infinite',
+        spin: 'spin 5s linear infinite',
         wiggle: 'wiggle 4s ease-in-out infinite',
       },
       keyframes: {
