@@ -1,4 +1,5 @@
 import Alpine from "alpinejs";
+import PineconeRouter from 'pinecone-router';
 
 import {
   getImageUrl,
@@ -37,4 +38,5 @@ Alpine.store("data", {
   getThumbnailUrl,
 });
 
+Alpine.plugin(PineconeRouter)
 Alpine.start();

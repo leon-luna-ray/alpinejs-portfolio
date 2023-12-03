@@ -739,6 +739,11 @@ pify@^2.3.0:
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
   integrity sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==
 
+pinecone-router@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/pinecone-router/-/pinecone-router-4.0.0.tgz#e54e31b84cacc2b732bb1c6a4d973144f08223d7"
+  integrity sha512-Dgp3otrqQZq7Rs4morVGfbYnXiUhwemGcyfmTgQ4N6YcqUiPH5a8WNgyfJrTqE6iqg3+PPQQYw1PXypcI0Sq5g==
+
 pirates@^4.0.1:
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/pirates/-/pirates-4.0.6.tgz#3018ae32ecfcff6c29ba2267cbf21166ac1f36b9"
