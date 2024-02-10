@@ -44,8 +44,11 @@
     <!-- Featured Projects -->
     <section id="featured-projects" class="flex-col-1">
         <div class="container">
-            <div class="flex justify-start py-[2rem] md:py-[4rem]">
-                <h2 class="">Featured Projects</h2>
+            <div class="flex justify-start flex-col gap-y-[1rem] py-[2rem] md:py-[4rem]">
+                <h2 class="">Projects</h2>
+                <p x-html="$store.data.projectsIntro"
+                class="opacity-80 text-[1.125rem] leading-[1.5rem]">
+                </p>
             </div>
             <div class="grid md:grid-cols-2 gap-y-[2rem] gap-x-[4rem]">
                 <template x-for="project in $store.data.projects">
@@ -56,7 +59,7 @@
                         <div class="flex-col-05">
                             <h3 x-text="project.title" class="font-dm font-bold h4 dark:!text-alpine-20 opacity-90">
                             </h3>
-                            <p x-text="project.description[0].children[0].text"
+                            <p x-text="project.intro"
                                 class="opacity-80 text-[1.125rem] leading-[1.5rem]">
                             </p>
                         </div>

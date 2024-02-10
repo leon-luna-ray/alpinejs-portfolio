@@ -6,14 +6,15 @@ import {
   getImageUrl,
   fetchProfile,
   fetchSkills,
-  fetchFeaturedProjects,
+  fetchProjectGroup,
+  portableTextToHTML,
 } from "./sanity";
 
 window.Alpine = Alpine;
 
 const profile = await fetchProfile();
 const skills = await fetchSkills();
-const projects = await fetchFeaturedProjects();
+const projects = await fetchProjectGroup('backend-projects');
 
 function getThumbnailUrl(image) {
   return getImageUrl(image).width(600).url();
@@ -39,7 +40,8 @@ Alpine.store("data", {
   skills: skills || [],
   profile: profile,
   image: profile.image ? getThumbnailUrl(profile.image) : "#",
-  projects: projects || [],
+  projectsIntro: portableTextToHTML(projects.description) || "",
+  projects: projects.projects || [],
   getThumbnailUrl,
 });
 

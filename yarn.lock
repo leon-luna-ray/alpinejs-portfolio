@@ -170,6 +170,26 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@portabletext/to-html@^2.0.5":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@portabletext/to-html/-/to-html-2.0.5.tgz#29eb2ae198906e51f7e26369aaafbf6d7271b329"
+  integrity sha512-KkUI6iBuKSzclyKYnwGLiE0asxvW1ZcFmZ7wBslW+nulw78qwpTl3wuK47zf+y0XX7g52d5gw5WlYBAhuSEjSg==
+  dependencies:
+    "@portabletext/toolkit" "^2.0.10"
+    "@portabletext/types" "^2.0.8"
+
+"@portabletext/toolkit@^2.0.10":
+  version "2.0.10"
+  resolved "https://registry.yarnpkg.com/@portabletext/toolkit/-/toolkit-2.0.10.tgz#ddcf88cb76b287ff9d5c94f69a6b370a9c9aba9c"
+  integrity sha512-d+F9JvpnMEx7kd6saZ9OWA4U1Iwuokh6TOht7iqkfWU+0ivh9yM4v+b0Kpu+iiPcElicoabhtXol+yTvWJ1jDw==
+  dependencies:
+    "@portabletext/types" "^2.0.8"
+
+"@portabletext/types@^2.0.8":
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/@portabletext/types/-/types-2.0.8.tgz#34aec838701482f838bdd0ee07a9e31dc01a9230"
+  integrity sha512-eiq9/kMX2bYezS4/kLFk3xNnruCFjCDdw6aYEv5ECHVKkYROiuLd3/AsP5d7tWF3+kPPy6tB0Wq8aqDG/URHGA==
+
 "@sanity/client@^5.4.2":
   version "5.4.2"
   resolved "https://registry.yarnpkg.com/@sanity/client/-/client-5.4.2.tgz#253b11d76a058de1fe6ec4f191d5872c7825fa80"
@@ -332,11 +352,6 @@ cssesc@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-3.0.0.tgz#37741919903b868565e1c09ea747445cd18983ee"
   integrity sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==
-
-darkmode-js@^1.5.7:
-  version "1.5.7"
-  resolved "https://registry.yarnpkg.com/darkmode-js/-/darkmode-js-1.5.7.tgz#b260ff671d67e021446ac8bade458e08338f6410"
-  integrity sha512-gM1KhV/yy/84ZUpES9/oeOn0CVtuOi2HBd+Kccr4CJz+rFccQo2gUuPbjfyPXUx7t800Zf408G6kZb5rkTgjFA==
 
 debug@^4.3.4:
   version "4.3.4"

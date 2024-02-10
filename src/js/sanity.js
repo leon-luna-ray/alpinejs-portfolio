@@ -1,6 +1,11 @@
 import { createClient } from '@sanity/client';
 import imageUrlBuilder from '@sanity/image-url';
+import { toHTML } from '@portabletext/to-html'
 
+
+export function portableTextToHTML(portableTextBlocks) {
+  return toHTML(portableTextBlocks)
+}
 
 export const client = createClient({
   projectId: import.meta.env.VITE_SANITY_PROJECT_ID,
@@ -34,4 +39,32 @@ export async function fetchFeaturedProjects() {
   const projects = await client.fetch(query);
 
   return projects;
+}
+export async function fetchProjectGroup(slug) {
+  const query = `*[_type == "projectGroup" && slug.current == "${slug}"] | order(title asc) {
+    _id,
+    title,
+    slug,
+    description,
+    projects[]->{
+      _id, 
+      intro, 
+      "mainImage": mainImage.asset->{
+        _id,
+        title,
+        altText,
+        description,
+      }, 
+      slug, 
+      status, 
+      title, 
+      technologies[]->{_id, title, slug,},
+      url,
+      customUrl,
+    },
+  }`;
+
+  const projectGroup = await client.fetch(query);
+
+  return projectGroup[0];
 }
