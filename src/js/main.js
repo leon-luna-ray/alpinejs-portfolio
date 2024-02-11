@@ -39,7 +39,7 @@ Alpine.store("darkMode", {
 Alpine.store("data", {
   skills: skills || [],
   profile: profile,
-  image: profile.image ? getThumbnailUrl(profile.image) : "#",
+  image: profile.image,
   projectsIntro: portableTextToHTML(projects.description) || "",
   projects: projects.projects || [],
   getThumbnailUrl,
