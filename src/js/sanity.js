@@ -31,7 +31,7 @@ export async function fetchProfile() {
     },
   }`;
   const profile = await client.fetch(query);
-  console.log(profile)
+
   return profile;
 }
 
