@@ -35,7 +35,7 @@
                 <h3 x-text="$store.data.profile.greeting" class="font-orbitron h4 dark:!text-alpine-20 font-[100]"></h3>
             </div>
             <div class="flex-col-2 md:col-span-2">
-                <img :src="$store.data.image" alt="Profile picture"
+                <img :src="$store.data.getThumbnailUrl($store.data.image)" :alt="$store.data.image.altText || 'Profile picture'"
                     class="object-cover aspect-square md:aspect-video xl:aspect-[21/9] rounded-border" />
                 <p x-text="$store.data.profile.bio" class="flex-1 text-[1.25rem] leading-[2.2rem]"></p>
             </div>
@@ -54,7 +54,7 @@
                 <template x-for="project in $store.data.projects">
                     <a native :href="project.url" target="_blank"
                         class="flex-col-1 hover:no-underline hover:!text-inherit zoom-in-out">
-                        <img :src="$store.data.getThumbnailUrl(project.mainImage)" :alt="project.title"
+                        <img :src="$store.data.getThumbnailUrl(project.mainImage)" :alt="project.mainImage.altText"
                             class="aspect-[16/9] object-cover rounded-border" />
                         <div class="flex-col-05">
                             <h3 x-text="project.title" class="font-dm font-bold h4 dark:!text-alpine-20 opacity-90">
