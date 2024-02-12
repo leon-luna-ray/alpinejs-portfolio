@@ -59,7 +59,7 @@ export async function fetchHomePage() {
   const query = `{
       "global": ${queryGlobalSettings},
       "profile": ${queryProfile},
-      "projects": ${queryProjectGroup('backend-projects')},
+      "projects": ${queryProjectGroup('alpinejs-portfolio')},
       "skillsGroups": ${querySkillsGroups}
   }`;
   const data = await client.fetch(query);
