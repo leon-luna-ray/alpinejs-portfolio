@@ -4,17 +4,13 @@ import { router } from '@/js/router';
 
 import {
   getImageUrl,
-  fetchProfile,
-  fetchSkills,
-  fetchProjectGroup,
   portableTextToHTML,
+  fetchHomePage
 } from "./sanity";
 
 window.Alpine = Alpine;
 
-const profile = await fetchProfile();
-const skills = await fetchSkills();
-const projects = await fetchProjectGroup('backend-projects');
+const data = await fetchHomePage();
 
 function getThumbnailUrl(image) {
   return getImageUrl(image).width(600).url();
@@ -37,11 +33,11 @@ Alpine.store("darkMode", {
 });
 
 Alpine.store("data", {
-  skills: skills || [],
-  profile: profile,
-  image: profile.image,
-  projectsIntro: portableTextToHTML(projects.description) || "",
-  projects: projects.projects || [],
+  skills: data?.skillsGroups || [],
+  profile: data?.profile || {},
+  image: data?.profile.image,
+  projectsIntro: portableTextToHTML(data?.projects.description) || "",
+  projects: data?.projects.projects || [],
   getThumbnailUrl,
 });
 
